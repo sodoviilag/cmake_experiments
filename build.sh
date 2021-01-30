@@ -1,7 +1,10 @@
+rm -r build
+
 mkdir build
 
 cd build 
 
-cmake ..
+cmake -G Ninja ..
 
-cmake --build .
+cmake --build . -v
+
