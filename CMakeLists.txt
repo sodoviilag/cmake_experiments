@@ -6,19 +6,17 @@ set( CMAKE_TOOLCHAIN_FILE myToolchain/toolchainfile.txt)
 
 project (MyCMakeExperiments VERSION 0.1 LANGUAGES CXX)
 
-set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR})
-
 include(GNUInstallDirs)
-
 
 add_executable(MyCMakeExperiments main.cpp)
 
-target_link_libraries(MyCMakeExperiments 
+target_link_libraries(MyCMakeExperiments  
     PUBLIC 
         myInterfaceLib
-    PRIVATE
-        #myImplementationLib
+        myImplementationLib
 )
 
 add_subdirectory(myInterfaceLib)
 add_subdirectory(myImplementationLib)
+
+install(TARGETS MyCMakeExperiments DESTINATION bin)

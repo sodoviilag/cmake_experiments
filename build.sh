@@ -1,3 +1,7 @@
-cmake -H.
+mkdir build
 
-make
+cd build 
+
+cmake ..
+
+cmake --build .
