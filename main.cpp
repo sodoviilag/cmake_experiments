@@ -1,5 +1,4 @@
-//#include <stdio.h>
-//#include "CommonTypes.hpp"
+#include "CommonTypes.hpp"
 
 int main()
 {
