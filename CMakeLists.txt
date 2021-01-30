@@ -18,6 +18,9 @@ add_executable(MyCMakeExperiments main.cpp)
 find_package( Boost 1.65.1 COMPONENTS program_options REQUIRED )
 include_directories( ${Boost_INCLUDE_DIR} )
 
+#########################################################
+# Executable linked Libraries
+#########################################################
 target_link_libraries(MyCMakeExperiments  
     PUBLIC 
         myInterfaceLib
@@ -25,5 +28,8 @@ target_link_libraries(MyCMakeExperiments
         ${Boost_LIBRARIES}
 )
 
+#########################################################
+# Add project subdirectories
+#########################################################
 add_subdirectory(myInterfaceLib)
 add_subdirectory(myImplementationLib)
