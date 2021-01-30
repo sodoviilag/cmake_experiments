@@ -4,9 +4,9 @@ message("Building MyCMakeExperiments")
 
 set( CMAKE_INSTALL_PREFIX ".")
 
-set( CMAKE_TOOLCHAIN_FILE myToolchain/toolchainfile.txt)
+#set( CMAKE_TOOLCHAIN_FILE myToolchain/toolchainfile.txt)
 
-project (MyCMakeExperiments VERSION 0.1 LANGUAGES CXX)
+project (MyCMakeExperiments VERSION 0.1 LANGUAGES CXX C ASM)
 
 include(GNUInstallDirs)
 

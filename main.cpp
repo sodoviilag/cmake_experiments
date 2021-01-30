@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "CommonTypes.hpp"
 #include "MyLib.hpp"
 
