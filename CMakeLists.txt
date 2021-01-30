@@ -12,12 +12,11 @@ include(GNUInstallDirs)
 
 add_executable(MyCMakeExperiments main.cpp)
 
-add_subdirectory(myInterfaceLib)
-add_subdirectory(myImplementationLib)
-
 target_link_libraries(MyCMakeExperiments  
     PUBLIC 
         myInterfaceLib
-        ${MYIMPLEMENTATIONLIB}
+        MyImplementationLib
 )
 
+add_subdirectory(myInterfaceLib)
+add_subdirectory(myImplementationLib)

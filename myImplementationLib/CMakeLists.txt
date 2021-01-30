@@ -1,6 +1,6 @@
 message("Building MyImplementationLib")
 
-add_library(MyImplementationLib "")
+add_library(MyImplementationLib STATIC)
 
 
 target_sources(MyImplementationLib
