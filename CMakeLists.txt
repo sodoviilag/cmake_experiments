@@ -10,8 +10,15 @@ set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR})
 
 include(GNUInstallDirs)
 
-add_subdirectory(myInterfaceLib)
 
 add_executable(MyCMakeExperiments main.cpp)
 
-target_link_libraries(MyCMakeExperiments PUBLIC myInterfaceLib)
+target_link_libraries(MyCMakeExperiments 
+    PUBLIC 
+        myInterfaceLib
+    PRIVATE
+        #myImplementationLib
+)
+
+add_subdirectory(myInterfaceLib)
+add_subdirectory(myImplementationLib)
