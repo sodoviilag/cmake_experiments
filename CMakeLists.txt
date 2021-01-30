@@ -12,10 +12,17 @@ include(GNUInstallDirs)
 
 add_executable(MyCMakeExperiments main.cpp)
 
+#########################################################
+# External Libraries
+#########################################################
+find_package( Boost 1.65.1 COMPONENTS program_options REQUIRED )
+include_directories( ${Boost_INCLUDE_DIR} )
+
 target_link_libraries(MyCMakeExperiments  
     PUBLIC 
         myInterfaceLib
         MyImplementationLib
+        ${Boost_LIBRARIES}
 )
 
 add_subdirectory(myInterfaceLib)
