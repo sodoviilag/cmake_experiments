@@ -1,0 +1,3 @@
+cmake -H.
+
+make
